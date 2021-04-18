@@ -37,7 +37,6 @@ export class CharactersComponent implements OnInit {
   }
 
   sortingCharacter(){
-    console.log('sorting',this.sorting);
     if(this.sorting == 'name'){
       this.charactersLists.sort((a:any,b:any)=>{
         return (a.name > b.name) ? 1 :
@@ -45,7 +44,6 @@ export class CharactersComponent implements OnInit {
       });
     }else if(this.sorting == 'lname'){
       this.charactersLists.sort((a:any,b:any)=>{
-        console.log(a , b);
         let la = a.name.split(' '),
             lb = b.name.split(' ');
           return (la[1] > lb[1]) ?  1 :
