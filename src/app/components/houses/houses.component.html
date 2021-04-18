@@ -1,0 +1,7 @@
+<div class="row container_img">
+    <div class="col-3  " *ngFor="let img of imgs; let i = index">
+        <img class="img_house" src="{{img}}" (click)="updateList(members[i]?.name)" />
+        <h3>{{members[i]?.name}}</h3>
+        <span>Members: {{members[i]?.count}}</span>
+    </div>
+</div>
